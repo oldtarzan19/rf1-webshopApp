@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <title>Töszkó</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel='stylesheet' href='/style.css' >
+</head>
+<header>
+  <div class="menus">
+    <div class="logo">
+      <p>
+        <a href="index">Töszkó</a>
+      </p>
+    </div>
+
+    <div class="belepes">
+      <p>
+        <a sec:authorize="!isAuthenticated()" href="/login">Belépés</a>
+      </p>
+      <p>
+        <a sec:authorize="isAuthenticated()" href="/logout">Kilépés</a>
+      </p>
+    </div>
+
+    <div class="regi" sec:authorize="!isAuthenticated()" >
+      <p>
+        <a href="register">Regisztráció</a>
+      </p>
+    </div>
+
+    <div class="kosar">
+      <p>
+        <a href="cart">Kosár</a>
+      </p>
+    </div>
+  </div>
+  <ul class="oldalak">
+    <li class="elemek" sec:authorize="hasAuthority('ROLE_ADMIN')">
+      <a href="arucikk_hozzaadasa">Készlet kezelő oldal(admin only)</a>
+    </li>
+    <li class="elemek" sec:authorize="hasAuthority('ROLE_ADMIN')">
+      <a href="transport">Szállítás kezelő oldal(admin only)</a>
+    </li>
+    <li id="active" class="elemek" sec:authorize="hasAuthority('ROLE_ADMIN')">
+      <a href="felhasznalok_kezelese">Felhasználó kezelő oldal(admin only)</a>
+    </li>
+    <li class="elemek">
+      <a href="panaszbenyujtas">Panaszbenyújtási űrlap</a>
+    </li>
+    <li class="elemek" sec:authorize="isAuthenticated()">
+      <a href="premium">Prémium</a>
+    </li>
+  </ul>
+
+  <hr>
+
+</header>
+<body>
+<div class="update">
+<div class="stuff">
+  <h2>Felhasználó törlése:</h2>
+  <form th:action="@{/felhasznalok_kezelese_torles/{id}}" method="post">
+    <label class="szavak">ID:
+      <input class="tab2" type="number" name="id" required>
+    </label> <br/>
+    <input type="submit" value="Submit" class="tab">
+  </form>
+</div>
+
+<div class="stuff">
+  <h2>Felhasználó módosítása:</h2>
+  <form th:action="@{/felhasznalok_kezelese_modosit/{id}}" method="post">
+    <label class="szavak">ID:
+      <input class="tab2" type="number" name="id">
+    </label> <br/>
+    <label class="szavak">Felhasználónév:
+      <input class="tab2" type="text" name="felhnev">
+    </label> <br/>
+    <label class="szavak">Email:
+      <input class="tab2" type="text" name="email">
+    </label> <br/>
+    <label class="szavak">Cím:
+      <input class="tab2" type="text" name="cim">
+    </label> <br/>
+    <input type="submit" value="Submit" class="tab">
+  </form>
+</div>
+
+<div class="stuff output">
+  <h2>Felhasználók:</h2>
+  <table>
+    <thead>
+    <tr>
+      <th style="">ID</th>
+      <th>Felhasználónév</th>
+      <th>Email</th>
+      <th>Cím</th>
+    </tr>
+    </thead>
+    <tbody style="width: 90%; margin: 2%;padding: 2.5%">
+    <!--span th:each="task,iter : ${foo.tasks}"-->
+    <tr th:each="felhasznalo: ${user}">
+      <td th:text="${felhasznalo.id}"></td>
+      <td th:text="${felhasznalo.felhasznalonev}"></td>
+      <td th:text="${felhasznalo.email}"></td>
+      <td th:text="${felhasznalo.cim}"></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+
+</body>
+</html>

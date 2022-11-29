@@ -1,0 +1,370 @@
+html {
+    font-family: "Calisto MT", serif;
+    background-color: white;
+}
+
+.logo{
+    background-color: #b4b4ea;
+    border-color: red;
+    font-size: 25px;
+    width: 30%;
+    height: 5%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.menus{
+    display: flex;
+    flex-direction: row;
+}
+
+.navgombok{
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+}
+
+.proba{
+    margin-left: auto;
+    height: 5%;
+    border-style: solid;
+    width: 10%;
+    text-align: center;
+    word-wrap: break-word;
+}
+.proba2{
+    margin-right: auto;
+    height: 5%;
+    border-style: solid;
+    width: 10%;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+
+.belepes{
+    margin-left: 65%;
+    height: 5%;
+    border-style: solid;
+    width: 5%;
+    text-align: center;
+    word-wrap: break-word
+}
+
+.regi{
+    margin-left: 1%;
+    height: 5%;
+    border-style: solid;
+    width: 8%;
+    text-align: center;
+    word-wrap: break-word;
+
+}
+.kosar{
+    margin-left: 5%;
+    height: 5%;
+    border-style: solid;
+    width: 5%;
+    text-align: center;
+}
+
+hr{
+    width: 100%;
+    height: 2px;
+    background-color: black;
+}
+
+.footer{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    width: 99%;
+    border-style: solid;
+    padding: 5px;
+
+}
+.footerlista{
+    margin-right: 30%;
+    margin-left: 1%;
+    border-style: solid;
+    border-width: 1px;
+    padding: 10px;
+}
+
+.termekek{
+    margin: 4% auto;
+    width: 40%;
+    overflow-y: scroll;
+    height: 700px;
+    border-style: dashed;
+    border-width: 5px;
+    border-color: maroon;
+}
+
+.termekek div{
+    height: 200px;
+    background-color: rebeccapurple;
+    border-style: solid;
+    border-color: black;
+}
+
+
+
+.reg {
+    background-color: darkgray;
+    border-style: solid;
+    border-color: limegreen;
+    margin: 2%;
+}
+
+.regg {
+    bottom: 120px;
+    margin: 4% auto 20%;
+    width: 40%;
+    height: 100%;
+    border-style: solid;
+    border-color: red;
+    border-width: thick;
+}
+
+.tab {
+    width: 40%;
+    margin-right: 30%;
+    margin-left: 30%;
+}
+
+.tab2 {
+    width: 500px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+.szavak {
+    display: block;
+    width: 140px;
+    text-align: left;
+}
+
+h2 {
+    text-align: center;
+}
+
+.ajanlott_termekek {
+    bottom: 120px;
+    margin: 4% auto 20%;
+    width: 40%;
+    height: 100%;
+    border-style: solid;
+    border-color: red;
+    border-width: thick;
+}
+
+.ajanlott {
+    background-color: darkgray;
+    border-style: solid;
+    border-color: limegreen;
+    margin: 2%;
+}
+
+.panasz {
+        border-style: solid;
+        border-color: red;
+        border-width: thick;
+}
+
+
+/* Kosár formázás */
+.kosar_termekek {
+    bottom: 120px;
+    margin: 4% auto 20%;
+    width: 40%;
+    height: 100%;
+    border-style: solid;
+    border-color: maroon;
+    border-width: thick;
+
+}
+
+.kosarban {
+    background-color: darkgray;
+    border-style: solid;
+    border-color: limegreen;
+    margin: 2%;
+}
+
+.megszakit {
+    background-color: red;
+    margin: 3% 17%;
+    text-align: center;
+    word-wrap: break-word;
+    padding: 5px;
+    border-style: solid;
+    border-width: 2px;
+    cursor: pointer;
+}
+.megszakit:hover{
+    border-width: 4px;
+    border-color: #a10000;
+}
+
+.vasarlas {
+    background-color: limegreen;
+    margin: auto;
+    text-align: center;
+    word-wrap: break-word;
+    padding: 5px;
+    border-style: solid;
+    border-width: 2px;
+    cursor: pointer;
+}
+.vasarlas:hover{
+    border-width: 4px;
+    border-color: lime;
+}
+
+.gombok {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+/* Hűségpont oldal */
+
+.husegpontok{
+    border-style: solid;
+    width: 15%;
+    margin: auto;
+    padding: 10px;
+    word-wrap: break-word;
+    background-color: #757575;
+}
+.bevalthato_dolgok{
+    margin: 50px auto;
+    border-style: solid;
+    width: 50%;
+    height: 500px;
+    background-color: #757575;
+    padding: 10px;
+    border-spacing: 15px;
+
+}
+.bevalthato_dolgok td{
+    width: 50%;
+    background-color: black;
+    text-align: center;
+    color: white;
+    border-style: solid;
+    border-color: black;
+}
+.bevalthato_dolgok td:hover{
+    border-style: solid;
+    border-color: gold;
+}
+
+
+
+/* Belépés dolgok */
+.belepesdiv{
+    border-style: solid;
+    border-color: limegreen;
+    text-align: center;
+    background-color: #a2a2a2;
+    padding: 5%;
+    margin: 5% auto 20%;
+    width: 50%;
+}
+.belepesform{
+    color: maroon;
+}
+
+
+
+/* Általános formázás inputoknak */
+
+input {
+    margin-top: 2%;
+    overflow-block: auto;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+input:hover {
+    border-color: limegreen;
+}
+
+input[type="submit"] {
+    background-color: lightgray;
+}
+
+input[type="submit"]:hover {
+    background-color: limegreen;
+    cursor: pointer;
+    border: 3px solid black;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+}
+
+a:active {
+    color: red;
+}
+
+#active {
+    border-color: red;
+}
+
+.oldalak {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.elemek {
+    padding: 1%;
+    border-style: solid;
+    border-color: black;
+}
+
+/* KÉSZLET KEZELŐ ÉS SZÁLLíTÁS KEZELŐ OLDAL FORMÁZÁSAI */
+
+.update {
+    margin: 4% auto 40%;
+    width: 50%;
+    height: 100%;
+    border-style: solid;
+    border-width: thick;
+    border-color: red;
+}
+
+.stuff {
+    background-color: darkgray;
+    border-style: solid;
+    border-color: limegreen;
+    margin: 2%;
+    padding: 2.5%;
+}
+
+.output {
+    display: grid;
+}
+
+
+
+
+
+
+

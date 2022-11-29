@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="hu">
+   <head>
+      <title>Töszkó</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel='stylesheet' href='/style.css' >
+   </head>
+   <header>
+      <div class="logo">
+         <p>
+            <a href="index">Töszkó</a>
+         </p>
+      </div>
+   </header>
+   <body>
+      <div class="regg">
+         <h2>Regisztráció</h2>
+         <form action="#" th:action="@{/registeruser}" method="post" autocomplete="off">
+
+
+            <div class="reg">
+            <label  for="felhasznalonev" class="tab">Felhasználónév (kötelező): </label>
+               <input class="tab"  type="text" name="felhasznalonev" id="felhasznalonev" required maxlength="50">
+            </div>
+
+            <div class="reg">
+            <label for="email" class="tab">E-Mail (kötelező): </label>
+            <input class="tab" type="email" name="email" id="email" placeholder="valaki@pelda.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+            </div>
+
+               <div class="reg">
+            <label for="password" class="tab">Jelszó (kötelező): </label>
+            <input class="tab" type="password" name="password" id="password"   required>
+               </div>
+
+                  <div class="reg">
+            <label for="cim" class="tab">Cím: </label>
+            <input class="tab" type="text" name="cim" id="cim" placeholder="4321 Szeged, Széchényi utca 14." pattern="[0-9]{4}\s[a-zA-Zéáűőúöüó]+,\s[a-zA-Zéáűőúöüó]+\s(utca|út|tér)\s[0-9]{1,4}\.$" required>
+                  </div>
+
+            <div class="reg">
+            <input class="tab" type="submit" name="register-btn" value="Regisztráció">
+                     </div>
+         </form>
+      </div>
+   </body>
+</html>
